@@ -259,16 +259,15 @@ h2 {
 font-size:1.8em;
 line-height:2.5em;
 }
+& img {
+      max-width:100%;
+      height:auto;          
+}
 .site-header {
     position:absolute;
-    top:0;
-    left:0;
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
-    width:100%;
-    justify-items: center;
-    justify-items: 
+    top:10px;
+    left:10px;
+    z-index:1;
 }
 #content {
     /* padding-top: 200px; */
@@ -284,6 +283,7 @@ line-height:2.5em;
     height:160px;
     text-indent:-9999px;
     overflow:hidden;
+    margin:15px 10px 10px 20px;
 }
 .overlap-lijevo {
     margin-left:-10vw;
@@ -291,27 +291,124 @@ line-height:2.5em;
 .tekst {
     padding: 50px 20% 100px;
 }
+/* 
 .zaglavlje {
-    height: 100vh;
-    /* background-position: 0 50%;
-    background-attachment: fixed; */
-}
-.zaglavlje .elementor-widget-wrap {
+height:800px;
+} */
+.zaglavlje > div > .elementor-row {
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 
 }
-.menu-social {
-    -webkit-box-ordinal-group:3;
-        -ms-flex-order:2;
-            order:2
+.zaglavlje--izbornici > div > .elementor-widget-wrap {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top:10px;
 }
-.menu-social .sn-facebook {
+/* .menu-heading {
+    order:2;
+} */
+/* .menu-social {
+    
+    & .sn-facebook {
         text-indent:-9999px;
         overflow: hidden;
-        background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M15 0H.7C.2 0 0 .2 0 .7V15c0 .5.2 1 .7 1H8v-6H6V7h2V5.5c0-2.1 1.3-3.2 3.1-3.2.9 0 1.9 0 1.9.1V5h-.9c-1 0-1.1 0-1.1.7V7h2.3l-.3 3h-2v6h4c.5 0 1-.5 1-1V.7c0-.5-.6-.7-1-.7z' fill='%23102d69'/%3E%3C/svg%3E") no-repeat 50% 50%;
+        background: url('sn-facebook', fill=#fff) no-repeat 50% 50%;
         width:24px;
         height:24px;
     }
+} */
+#menu-main-menu ul {
+        list-style:none;
+    }
+#menu-main-menu li {
+        display: inline-block;
+    }
+#menu-main-menu a {
+        padding: 5px 0px 10px;
+        margin-left:10px;
+    }
+#menu-main-menu a,
+#menu-main-menu a:link,
+#menu-main-menu a:visited,
+#menu-main-menu a:active {
+        color: #fff;
+        text-decoration:none;
+        text-transform: uppercase;
+        font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    }
+#menu-main-menu a:hover {
+        border-bottom: 5px solid #fff;
+    }
+.zaglavlje--izbornici-main-menu {
+    margin-right:15px;
+}
+.zaglavlje--izbornici-menu-social {
+    padding:20px;
+}
+.pozadina {
+    position: absolute;
+    top:0;
+    left:0;
+}
+.akcije-inside .elementor-widget-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap
+}
+.akcije-inside .elementor-widget-container article {
+        -webkit-box-flex:1;
+            -ms-flex:1 1 320px;
+                flex:1 1 320px;
+        margin:10px;
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient:horizontal;
+        -webkit-box-direction:normal;
+            -ms-flex-direction:row;
+                flex-direction:row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap
+    }
+.akcije-inside .elementor-widget-container article .entry-partial-figure {
+            -webkit-box-flex:1;
+                -ms-flex:1 1 320px;
+                    flex:1 1 320px;
+            max-width:470px;
+        }
+.akcije-inside .elementor-widget-container article .entry-partial-content {
+
+            -webkit-box-flex: 1;
+
+                -ms-flex: 1 1 280px;
+
+                    flex: 1 1 280px;
+            margin:20px;
+        }
+.kosi {
+    width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

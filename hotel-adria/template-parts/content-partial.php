@@ -10,13 +10,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header-paertial">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
+	<figure class="entry-partial-figure">
 	<?php hotel_adria_post_thumbnail(); ?>
+</figure>
 
-	<div class="entry-content">
+	
+
+	<div class="entry-partial-content">
+	<header class="entry-partial-header">
+
+		<?php the_title( '<h3 class="entry-partial-title">', '</h3>' ); ?>
+	</header><!-- .entry-header -->
 		<?php
 		the_content();
 
@@ -25,10 +29,9 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="entry-partial-footer">
 			<?php
 			edit_post_link(
 				sprintf(
@@ -49,4 +52,6 @@
 			?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
+	</div><!-- .entry-content -->
+
 </article><!-- #post-<?php the_ID(); ?> -->

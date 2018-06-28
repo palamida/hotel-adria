@@ -45,14 +45,15 @@ font-size:1.8em;
 line-height:2.5em;
 }
 
+& img {
+      max-width:100%;
+      height:auto;          
+}
 .site-header {
     position:absolute;
-    top:0;
-    left:0;
-    display:flex;
-    width:100%;
-    justify-items: center;
-    justify-items: 
+    top:10px;
+    left:10px;
+    z-index:1;
 }
 
 #content {
@@ -71,6 +72,7 @@ line-height:2.5em;
     height:160px;
     text-indent:-9999px;
     overflow:hidden;
+    margin:15px 10px 10px 20px;
 }
 
 .overlap-lijevo {
@@ -80,20 +82,30 @@ line-height:2.5em;
 .tekst {
     padding: 50px 20% 100px;
 }
-
+/* 
 .zaglavlje {
-    height: 100vh;
-    /* background-position: 0 50%;
-    background-attachment: fixed; */
-}
+height:800px;
+} */
 
-.zaglavlje .elementor-widget-wrap {
+.zaglavlje > div > .elementor-row {
     display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
 }
 
-.menu-social {
+.zaglavlje--izbornici > div > .elementor-widget-wrap {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top:10px;
+}
+
+/* .menu-heading {
     order:2;
+} */
+/* .menu-social {
+    
     & .sn-facebook {
         text-indent:-9999px;
         overflow: hidden;
@@ -101,4 +113,68 @@ line-height:2.5em;
         width:24px;
         height:24px;
     }
+} */
+
+#menu-main-menu {
+    & ul {
+        list-style:none;
+    }
+    & li {
+        display: inline-block;
+    }
+    & a {
+        padding: 5px 0px 10px;
+        margin-left:10px;
+    }
+    & :--links {
+        color: #fff;
+        text-decoration:none;
+        text-transform: uppercase;
+        font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    }
+    & a:hover {
+        border-bottom: 5px solid #fff;
+    }
+}
+
+.zaglavlje--izbornici-main-menu {
+    margin-right:15px;
+}
+
+.zaglavlje--izbornici-menu-social {
+    padding:20px;
+}
+
+.pozadina {
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.akcije-inside .elementor-widget-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap:wrap;
+    & article {
+        flex:1 1 320px;
+        margin:10px;
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & .entry-partial-figure {
+            flex:1 1 320px;
+            max-width:470px;
+        }
+        & .entry-partial-content {
+
+            flex: 1 1 280px;
+            margin:20px;
+        }
+    }
+}
+
+.kosi {
+    width: 100%;
 }
