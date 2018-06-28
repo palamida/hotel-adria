@@ -1,0 +1,23 @@
+:root {
+
+    --fontSize: 1rem;
+    --mainColor: #12345678;
+    --highlightColor: hwb(190, 35%, 20%);
+    --plava: rgb(42,47,124);
+    --tirkizna: rgb(0,191,214);
+--siva: #bbbbbb;
+--crvena: rgb(185,62,49);
+
+/* razno */
+}
+
+/* media queries */
+
+@custom-media --mobile only screen and (width >= 600px); 
+@custom-media --tablet (width >= 768px);
+@custom-media --large (width >= 960px);
+@custom-media --wide (width >= 1200px);
+
+/* custom selectors  */
+
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
