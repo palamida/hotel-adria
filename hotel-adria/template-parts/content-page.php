@@ -9,10 +9,14 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php 
+if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+	?> style="background-image:url(<?php echo the_post_thumbnail_url(); ?>);"<?php
+} 
+?>>
 
-	<?php hotel_adria_post_thumbnail(); ?>
-
+	
+	
 	<div class="entry-content">
 		<?php
 		the_content();

@@ -19,7 +19,7 @@
 	<div class="entry-partial-content">
 	<header class="entry-partial-header">
 
-		<?php the_title( '<h3 class="entry-partial-title">', '</h3>' ); ?>
+		<?php the_title( '<h2 class="entry-partial-title">', '</h2>' ); ?>
 	</header><!-- .entry-header -->
 		<?php
 		the_content();

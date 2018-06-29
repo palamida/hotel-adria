@@ -247,6 +247,7 @@ h6 {
     font-weight: 700;
     text-transform: uppercase;
     line-height:1em;
+    color: #fff;
 }
 .screen-reader-text {
     display:none;
@@ -257,7 +258,6 @@ h1 {
 }
 h2 {
 font-size:1.8em;
-line-height:2.5em;
 }
 & img {
       max-width:100%;
@@ -369,16 +369,21 @@ height:800px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start;
-    -ms-flex-wrap:wrap;
-        flex-wrap:wrap
+            align-items: flex-start
+    /* display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 20px; */
 }
 .akcije-inside .elementor-widget-container article {
-        -webkit-box-flex:1;
-            -ms-flex:1 1 320px;
-                flex:1 1 320px;
+        /* grid-column: 0.5fr; */
+        /* flex:0 1 30px; */
         margin:10px;
         display:-webkit-box;
         display:-ms-flexbox;
@@ -387,28 +392,74 @@ height:800px;
         -webkit-box-direction:normal;
             -ms-flex-direction:row;
                 flex-direction:row;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap
+            flex-wrap: wrap;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 310px;
+                flex: 1 1 310px;
+        position:relative
+        /* one item */
+/* &:first-child:nth-last-child(1) {
+    width: 100%;
+  } */
+  
+  /* two items */
+  /* &:first-child:nth-last-child(2),
+  li:first-child:nth-last-child(2) ~ li {
+    width: 50%;
+  }
+   */
+  /* three items */
+  /* li:first-child:nth-last-child(3),
+  li:first-child:nth-last-child(3) ~ li {
+    width: 33.3333%;
+  } */
     }
 .akcije-inside .elementor-widget-container article .entry-partial-figure {
-            -webkit-box-flex:1;
-                -ms-flex:1 1 320px;
-                    flex:1 1 320px;
+            /* flex:1 1 320px; */
             max-width:470px;
         }
 .akcije-inside .elementor-widget-container article .entry-partial-content {
-
+            padding:20px 30px 20px 50px;
             -webkit-box-flex: 1;
-
                 -ms-flex: 1 1 280px;
-
                     flex: 1 1 280px;
-            margin:20px;
+            /* margin:20px; */
+        }
+.akcije-inside .elementor-widget-container article .entry-partial-title {
+            margin-left:-20px;
+        }
+@media var(min-width: 768px) {
+.akcije-inside .elementor-widget-container article {
+    }
+            
         }
 .kosi {
     width: 100%;
+}
+.type-page {
+    background-position: 50%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* dva stupca */
+.stupac-image {
+    background-size: cover;
+}
+.stupac-content {
+    margin:o;
+    padding:0;
+}
+.stupac-content-content {
+    background-color: rgb(0,191,214);
+    background-color: var(--tirkizna);
+    max-width: 470px;
+    padding:20px;
 }
 /*# sourceMappingURL=style.css.map */

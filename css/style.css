@@ -29,6 +29,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     line-height:1em;
+    color: #fff;
 }
 
 .screen-reader-text {
@@ -42,7 +43,6 @@ h1 {
 
 h2 {
 font-size:1.8em;
-line-height:2.5em;
 }
 
 & img {
@@ -153,28 +153,79 @@ height:800px;
 
 .akcije-inside .elementor-widget-container {
     display: flex;
-    align-items: flex-start;
     flex-wrap:wrap;
+    justify-content: center;
+    align-items: flex-start;
+    /* display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 20px; */
+    
     & article {
-        flex:1 1 320px;
+        /* grid-column: 0.5fr; */
+        /* flex:0 1 30px; */
         margin:10px;
         display:flex;
         flex-direction:row;
-        align-items: center;
+        justify-content: center;
+        align-items: flex-start;
         flex-wrap: wrap;
-
+        flex: 1 1 310px;
+        position:relative;
+        /* one item */
+/* &:first-child:nth-last-child(1) {
+    width: 100%;
+  } */
+  
+  /* two items */
+  /* &:first-child:nth-last-child(2),
+  li:first-child:nth-last-child(2) ~ li {
+    width: 50%;
+  }
+   */
+  /* three items */
+  /* li:first-child:nth-last-child(3),
+  li:first-child:nth-last-child(3) ~ li {
+    width: 33.3333%;
+  } */
         & .entry-partial-figure {
-            flex:1 1 320px;
+            /* flex:1 1 320px; */
             max-width:470px;
         }
         & .entry-partial-content {
-
+            padding:20px 30px 20px 50px;
             flex: 1 1 280px;
-            margin:20px;
+            /* margin:20px; */
+        }
+        & .entry-partial-title {
+            margin-left:-20px;
+        }
+        @media var(--tablet) {
+            
         }
     }
 }
 
 .kosi {
     width: 100%;
+}
+
+.type-page {
+    background-position: 50%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* dva stupca */
+
+.stupac-image {
+    background-size: cover;
+}
+.stupac-content {
+    margin:o;
+    padding:0;
+}
+.stupac-content-content {
+    background-color: var(--tirkizna);
+    max-width: 470px;
+    padding:20px;
 }
