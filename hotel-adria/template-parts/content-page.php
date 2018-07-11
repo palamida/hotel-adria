@@ -9,10 +9,10 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php  if ( is_front_page() ) { 
 if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	?> style="background-image:url(<?php echo the_post_thumbnail_url(); ?>);"<?php
-} 
+} }
 ?>>
 
 	

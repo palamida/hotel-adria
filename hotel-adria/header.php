@@ -28,13 +28,13 @@
 		<div class="site-branding">
 			<?php
 	
-			if ( is_front_page() && is_home() ) :
+			if ( is_front_page() ) :
 				?>
-				<h1 class="logo--frontpage site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<p class="site-logo--frontpage site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			else :
 				?>
-				<p class="logo site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-logo site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif; ?>
 		</div><!-- .site-branding -->

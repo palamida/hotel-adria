@@ -13,6 +13,7 @@ body, html {
 }
 
 body {
+    /* background: url(images/bg-plava.png) 50% 50% no-repeat; */
     background: url(images/bg.png) 50% 50% no-repeat;
     background-size: cover;
     background-color: var(--tirkizna);
@@ -24,12 +25,28 @@ body {
     font-weight:300;
 }
 
+.plavi {
+    background-color: var(--plava);
+}
+
+.tirkizni {
+    background-color: var(--tirkizna);
+}
+
 :--heading {
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     line-height:1em;
     color: #fff;
+}
+
+:--links {
+    text-decoration: underline;
+    color: #fff;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .screen-reader-text {
@@ -60,19 +77,22 @@ font-size:1.8em;
     /* padding-top: 200px; */
 }
 
-.logo--fp {
-    background: url('hotel-adria-logo2-white');
-    text-indent:-9999px;
-    overflow:hidden;
-}
-
-.logo {
+.site-logo--frontpage {
     background: url('hotel-adria-logo2-white') no-repeat;
     width:180px;
     height:160px;
     text-indent:-9999px;
     overflow:hidden;
     margin:15px 10px 10px 20px;
+}
+
+.site-logo {
+    background: url('hotel-adria-logo1-white') no-repeat;
+    width:180px;
+    height:47px;
+    text-indent:-9999px;
+    overflow:hidden;
+    margin:20px 10px 10px 20px;
 }
 
 .overlap-lijevo {
@@ -224,8 +244,48 @@ height:800px;
     margin:o;
     padding:0;
 }
+
+.stupac-content--review {
+    min-height: 400px;
+}
 .stupac-content-content {
-    background-color: var(--tirkizna);
+    color:#fff !important;
     max-width: 470px;
     padding:20px;
+}
+
+/* google karta */
+
+.karta {
+    margin: 0 auto;
+    max-width:1200px;
+    padding:20px;
+}
+
+/* footer */
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    & h4 {
+        margin: 0;
+    }
+    & p {
+        margin: 0;
+    }
+}
+
+/* tripadvisor u footeru */
+
+#TA_cdsratingsonlynarrow508 {
+    margin: 20px auto 40px;
+    display:inline-block;
+}
+
+/* title box */
+
+.title-box {
+    & :--heading{
+        margin:0;
+    }
 }

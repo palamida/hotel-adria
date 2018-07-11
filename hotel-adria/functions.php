@@ -83,6 +83,13 @@ if ( ! function_exists( 'hotel_adria_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'hotel_adria_setup' );
 
+
+function hotel_adria_header_footer_elementor_support() {
+	add_theme_support( 'header-footer-elementor' );
+}
+
+add_action( 'after_setup_theme', 'hotel_adria_header_footer_elementor_support' );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
