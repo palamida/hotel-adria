@@ -275,6 +275,17 @@ height:800px;
     }
 }
 
+.managedby {
+    background: url('jamb-bijeli-v2') no-repeat;
+    width:68px;
+    height:31px;
+    text-indent:-9999px;
+    overflow:hidden;
+    display: inline-block;
+    margin: 0 0 -8px 4px;
+}
+
+
 /* tripadvisor u footeru */
 
 #TA_cdsratingsonlynarrow508 {
@@ -287,5 +298,209 @@ height:800px;
 .title-box {
     & :--heading{
         margin:0;
+    }
+}
+
+/* booking form */
+
+.booking-form2 select {
+    width:60px;
+    background-color: var(--plava);
+    color: #fff;
+    font-size: inherit;
+    padding:4px;
+    /* padding-right: 2.5em;	 */
+    border: 1px solid #fff;
+    margin: 0;
+    border-radius: 1px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button; /* hide default arrow in chrome OSX */
+    outline: none;
+
+  }
+
+  .booking-form {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  
+    & label {
+        display:block;
+    }
+    }
+
+
+
+/* Custom dropdown */
+.booking-select {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px; /* demo only */
+  }
+  
+  .booking-select select {
+    background-color: #fff;
+    color: var(--plava);
+    font-size: inherit;
+    padding: 8px;
+    padding-right: 2.5em;	
+    border: 0;
+    margin: 0;
+    border-radius: 2px;
+    text-indent: 0.01px;
+    text-overflow: '';
+   appearance: button; /* hide default arrow in chrome OSX */
+  }
+  
+  .booking-select::before,
+  .booking-select::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .booking-select::after { /*  Custom dropdown arrow */
+    content: "\25BC";
+    color: var(--tirkizna);
+    height: 1em;
+    font-size: .625em;
+    line-height: 1;
+    right: 1.2em;
+    top: 50%;
+    margin-top: -.5em;
+  }
+  
+  .booking-select::before { /*  Custom dropdown arrow cover */
+    width: 2em;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 2px 2px 0;
+  }
+  
+  /* .booking-select select[disabled] {
+    color: rgba(0,0,0,.3);
+  }
+  
+  .booking-select select[disabled]::after {
+    color: rgba(0,0,0,.1);
+  } */
+  
+  .booking-select::before {
+    /* background-color: color-mod(var(--plava) alpha(40%)); */
+    background-color: #efefef;
+  }
+  
+  /* .booking-select::after {
+    color: rgba(0,0,0,.4);
+  } */
+.booking-button {
+    text-align:right;
+}
+#bookButton {
+    position:relative;
+    z-index: 2;
+    margin-right:0;
+    padding:10px 25px;
+    background-color: var(--plava);
+    color: #fff;
+    font-size: 1em;
+    text-transform:uppercase;
+    border-radius: 2px;
+    border: none;
+    appearance: none;
+    transition: all 0.3s linear;
+    cursor:pointer;
+    &:hover {
+        background-color: var(--zelena);
+    }
+}
+
+.booking-title {
+    text-align: center;
+}
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--plava); /* Fallback color */
+    background-color: color-mod(var(--tirkizna) alpha(80%));
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: var(--tirkizna);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 10px solid #fff;
+    border-color: color-mod(#ffffff alpha(80%));
+    width: 90%; /* Could be more or less, depending on screen size */
+    max-width:980px;
+    position:relative;
+}
+
+
+/* The Close Button */
+.close {
+    color: #eee;
+    background-color: #f00;
+    padding:8px 12px;
+    border-radius: 2px;
+    /* float: right; */
+    font-size: 28px;
+    position:absolute;
+    top:10px;
+    right:10px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.booking-form {
+    & input[type=text] {
+        padding: 9px;
+        margin:10px 5px;
+        font-size:inherit;
+        border-radius: 2px;
+        color: var(--plava);
+        line-height: 20px;
+        border:none;
+    }
+
+    & label {
+        margin-left:10px;
+    }
+
+    & input[type=submit] {
+        font-size: inherit;
+        padding:9px 15px;
+        border-radius: 2px;
+        margin:10px;
+        /* margin-bottom:0; */
+        appearance: none;
+        border:none;
+        line-height: 20px;
+        background-color: #d8fd9d;
+        text-transform: uppercase;
+        &:hover {
+            background-color: #b4f44e;
+        }
+    }
+
+    & .book-kalendar {
+        margin-left:-20px;
     }
 }

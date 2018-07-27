@@ -59,7 +59,6 @@ gulp.task('css', function () {
       ),
       require('postcss-normalize')(),
       require("stylelint")({ /* your options */ }),
-
       // require('postcss-partial-import')({ /* options */ }),
       // require("postcss-url")(),
       require ('postcss-preset-env')({
@@ -68,6 +67,7 @@ gulp.task('css', function () {
           'nesting-rules': true,
           'custom-media-queries': true,
           'custom-selectors': true,
+          'color-mod-function':true,
         }
       }),
       require('postcss-svg')({
